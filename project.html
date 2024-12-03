@@ -15,81 +15,103 @@
   
   
   <!-- <font face="times" size="3"> -->
-  <hr noshade="noshade" size="2">
+  <!-- <hr noshade="noshade" size="2"> -->
+  <!-- <header>  -->
+    <!-- <h1>&lt;Project&gt;</h1>; -->
+    <h1>&lt;Project&gt;</h1>
+  <!-- </header> -->
   
-  <h1>&lt;Project&gt;</h1>
-  <b>Team Members:</b> &lt;Jaden, Shreya, Jackson, Ethan, Jomei&gt;<br>
-  <br>
+  <!-- <section class="team-members"> -->
+
+
+  <!-- <h1>&lt;Project&gt;</h1> -->
+
+   <!-- <section class="team-members"> -->
+    <!-- <p>Team Members:</p> -->
+    <!-- <span>Jaden, Shreya, Jackson, Ethan, Jomei</span> -->
+  <!-- </section>  -->
+
+  <p id = "team-members"><b>Team Members:</b> &lt;Jaden, Shreya, Jackson, Ethan, Jomei&gt;</p>
+  
+  <!-- </section> -->
+  <!-- <br>
+  <br> -->
+
   <hr>
-  <ul>
-  <li><b>Relations:</b><br><br>
-  <i>In the following, substitute actual names for Relation1, Relation2 etc.
-  Have as many entries as the number of relations in your project. Clicking
-  a link on a relation name should execute an SQL query and list
-  *all* the tuples in that particular relation (of course, they don't work
-  below). Your output should be presented
-  in a neat orderly fashion, one row for each tuple and columns are evident.</i><br><br>
-  <ol>
-  <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Users">Users</a> 
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Photos">Photos</a>
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Post">Post</a>
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Post_Category">Post_Category</a>
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Projects">Projects</a>
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Reply">Reply</a>
-  </li><li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Comments">Comments</a>
-  </li></ol>
-  <br><br>
-  <hr>
-  </li><li><b>Queries:</b><br><br>
-  <i>In the following, substitute the english query description for each of
-  the five queries that you did in milestone3 of your project. Again, clicking
-  a link on the query name should execute the appropriate SQL query and
-  list the tuples that are the answer to that particular query. Again,
-  make sure your output is neatly ordered and columns are evident.<br><br>
-  <ol>
-    <li><a href="https://css1.seattleu.edu/~jroot/query1.php">Query 1</a>: Retrieve all users and their comments containing the word "great".
-    </li><li><a href="https://css1.seattleu.edu/~jroot/query2.php">Query 2</a>: Count the number of posts each user made.
-    </li><li><a href="https://css1.seattleu.edu/~jroot/query3.php">Query 3</a>: Retrieve usernames of users who have completed projects.
-    </li><li><a href="https://css1.seattleu.edu/~jroot/query4.php">Query 4</a>: Retrieve user IDs and their post count for users with more than one post.
-    </li><li><a href="https://css1.seattleu.edu/~jroot/query5.php">Query 5</a>: Retrieve all users and their project names.
-    </li></ol>
-  <br><br>
-  <hr>
-  </i></li><li><i><b>Ad-hoc Query:</b><br><br>
-  <i>Here, provide a free-form box and two buttons called
-  "Submit" and "Clear". The intent is that the user can enter any arbitrary
-  SQL query in the box and click the submit button; The action should be that you should
-  execute that query on the database and bring up the answers, once again, in a neat orderly fashion. Notice that the input
-  can be any legal SQL query (permissible under your DB system, of course).
-  </i><br><br>
-  <form method="POST" action="https://css1.seattleu.edu/~jroot/execute_query.php">
-        <table class = "form-table">
-          <tbody><tr>
-            <td align="right">
-              <strong>Please enter your query here<br></strong>
-            </td>
-            <td>
-              <input size="30" name="query" type="text">
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <input value="Clear" type="reset">
-            </td>
-            <td>
-              <input value="Submit" type="submit">
-            </td>
-          </tr>
-        </tbody></table>
+<ul>
+  <li><b>Relations:</b>
+    <br>
+    <br>
+    <i>In the following, substitute actual names for Relation1, Relation2 etc.
+    Have as many entries as the number of relations in your project. Clicking
+    a link on a relation name should execute an SQL query and list
+    *all* the tuples in that particular relation (of course, they don't work
+    below). Your output should be presented
+    in a neat orderly fashion, one row for each tuple and columns are evident.</i>
+    
+    <br>
+    <br>
+    
+    <ol>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Users">Users</a> </li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Photos">Photos</a></li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Post">Post</a></li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Post_Category">Post_Category</a></li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Projects">Projects</a></li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Reply">Reply</a></li>
+      <li><a href="http://css1.seattleu.edu/~jroot/Relations.php?tableName=Comments">Comments</a></li>
+    </ol>
+
+    <br>
+    <br>
+    <hr>
+  </li>
+
+  <li><b>Queries:</b><br><br>
+    <i>In the following, substitute the english query description for each of
+    the five queries that you did in milestone3 of your project. Again, clicking
+    a link on the query name should execute the appropriate SQL query and
+    list the tuples that are the answer to that particular query. Again,
+    make sure your output is neatly ordered and columns are evident.<br><br>
+    <ol>
+      <li><a href="https://css1.seattleu.edu/~jroot/query1.php">Query 1</a>: Retrieve all users and their comments containing the word "great".
+      </li><li><a href="https://css1.seattleu.edu/~jroot/query2.php">Query 2</a>: Count the number of posts each user made.
+      </li><li><a href="https://css1.seattleu.edu/~jroot/query3.php">Query 3</a>: Retrieve usernames of users who have completed projects.
+      </li><li><a href="https://css1.seattleu.edu/~jroot/query4.php">Query 4</a>: Retrieve user IDs and their post count for users with more than one post.
+      </li><li><a href="https://css1.seattleu.edu/~jroot/query5.php">Query 5</a>: Retrieve all users and their project names.
+      </li>
+    </ol>
+    
+    <br>
+    <br>
+    
+    <hr>
+    </i>
+  </li>
+  <li>
+    <section id = "ad-hoc-query">
+      <h2>Ad-hoc Query</h2>
+      <p>Here, provide a free-form box and two buttons called "Submit" and "Clear". The intent is that the user can enter any arbitrary SQL query in the box and click the submit button; the query will be executed, and the answers displayed in a neat and orderly fashion.</p>
+      <form method="POST" action="https://css1.seattleu.edu/~jroot/execute_query.php">
+          <label for="query-input" class="query-label">Please Enter Your Query Here:</label>
+          <textarea id="query-input" name="query" class="sql-input" placeholder="Enter your SQL query here..."></textarea>
+          <div style="text-align: center;">
+            <button type="reset" class="btn btn-clear">Clear</button>
+            <button type="submit" class="btn btn-submit">Submit</button>
+          </div>
       </form>
-  </i></li></ul><i>
+    </section>
+      </i>
+  </li>
+</ul>
+<i>
+
   <p></p>
   </i></font><i><i>
-  <hr noshade="noshade" size="2">
   <p></p>
-  
   </i></i>
-  </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
         div.grammarly-desktop-integration {
           position: absolute;
           width: 1px;

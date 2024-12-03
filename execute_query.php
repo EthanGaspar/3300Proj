@@ -29,13 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
         <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
     </head>
     <body>
-        <h1>Ad Hoc Query Results</h1>
     <?php
     if ($result === FALSE) {
+        echo "<h1> Ad Hoc Query Error </h1>";
         echo "<p style='color: red;'>Error executing query: " . mysqli_error($conn) . "</p>";
     } else {
         // Display results in a table if the query returns data
+        echo "<h1> Ad Hoc Query: '" .htmlspecialchars($query) . "' Result</h1>";
+        echo "<p style = 'text-align: center'>Ambigous Column names highlighted in <span style='color: red'>RED</span> (CAN CAUSE ISSUES)</p>";
+
+
         if (mysqli_num_rows($result) > 0) {
+            $headers = [];
             // echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
             echo "<table class = 'styled-table'>";
             echo "<tr>";
@@ -43,8 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
             // Fetch and display table headers
             $fields = mysqli_fetch_fields($result);
             foreach ($fields as $field) {
-                echo "<th>" . htmlspecialchars($field->name) . "</th>";
-            }
+                $column_name = $field->name;
+                if (in_array($column_name, $headers)) {
+                    echo "<th style='color: red;'>" . htmlspecialchars($column_name) . " (Ambiguous)</th>";
+                } else {
+                    echo "<th>" . htmlspecialchars($column_name) . "</th>";
+                    $headers[] = $column_name;
+                }            }
             echo "</tr>";
 
             // Fetch and display each row of data
@@ -72,6 +82,8 @@ mysqli_close($conn);
 ?>
 
 <!-- Link back to the query form -->
-<p><a href="project.html">Back to Query Form</a></p>
+<div class ="back_Button">
+    <p><a class = "back_Button" href="project.html">Back to Query Form</a></p>
+</div>
 </body>
 </html>

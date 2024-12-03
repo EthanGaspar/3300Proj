@@ -70,6 +70,8 @@ mysqli_close($conn);
 ?>
 
 <!-- Link back to the query form -->
-<p><a href="project.html">Back to Query Form</a></p>
+<div class ="back_Button">
+    <p><a class = "back_Button" href="project.html">Back to Query Form</a></p>
+</div>
 </body>
 </html>
