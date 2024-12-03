@@ -19,13 +19,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
 
     // Execute the query and check for errors
     $result = mysqli_query($conn, $query);
-
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Query Results</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    </head>
+    <body>
+        <h1>Ad Hoc Query Results</h1>
+    <?php
     if ($result === FALSE) {
         echo "<p style='color: red;'>Error executing query: " . mysqli_error($conn) . "</p>";
     } else {
         // Display results in a table if the query returns data
         if (mysqli_num_rows($result) > 0) {
-            echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+            // echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+            echo "<table class = 'styled-table'>";
             echo "<tr>";
 
             // Fetch and display table headers
@@ -61,3 +73,5 @@ mysqli_close($conn);
 
 <!-- Link back to the query form -->
 <p><a href="project.html">Back to Query Form</a></p>
+</body>
+</html>
