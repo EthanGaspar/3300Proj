@@ -29,6 +29,7 @@ if (isset($_GET['tableName'])) {
         <title>Query Results</title>
         <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
     </head>
+    <body>
     <?php
     if ($result) {
         // Display the table contents
@@ -63,3 +64,8 @@ if (isset($_GET['tableName'])) {
 // Close the database connection
 mysqli_close($conn);
 ?>
+
+<!-- Link back to the query form -->
+<p><a href="project.html">Back to Query Form</a></p>
+</body>
+</html>

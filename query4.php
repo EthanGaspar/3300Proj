@@ -28,6 +28,8 @@ $result = mysqli_query($conn, $query);
     <title>Query Results</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
+<body>
+    <h1>Query3 Results</h1>
 <?php
 if ($result == TRUE){
     if (mysqli_num_rows($result) > 0) {
@@ -73,3 +75,6 @@ mysqli_close($conn);
 
 <!-- Link back to the query form -->
 <p><a href="project.html">Back to Query Form</a></p>
+
+</body>
+</html>

@@ -80,3 +80,5 @@ mysqli_close($conn);
 
 <!-- Link back to the query form -->
 <p><a href="project.html">Back to Query Form</a></p>
+</body>
+</html>
