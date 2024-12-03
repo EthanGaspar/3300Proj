@@ -20,11 +20,20 @@ if (isset($_GET['tableName'])) {
     // Query to select all rows from the specified table
     $query = "SELECT * FROM `$tableName`";
     $result = mysqli_query($conn, $query);
-
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Query Results</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    </head>
+    <?php
     if ($result) {
         // Display the table contents
         echo "<h2>Table: " . htmlspecialchars(string: $tableName) . "</h2>";
-        echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+        echo "<table class = 'styled-table' border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
         echo "<tr>";
 
         // Display table headers

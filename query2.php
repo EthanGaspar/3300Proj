@@ -24,11 +24,25 @@ Post p ON u.user_id = p.user_id
 GROUP BY 
 u.username;";
 $result = mysqli_query($conn, $query);
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <h1>Query2 Results</h1>
+<?php
 if ($result == TRUE){
     if (mysqli_num_rows($result) > 0) {
-        echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+        // echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+        echo "<table class = 'styled-table'>";
+
         echo "<tr>";
+
 
         // Fetch and display table headers
         $fields = mysqli_fetch_fields($result);

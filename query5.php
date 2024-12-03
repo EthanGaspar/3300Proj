@@ -18,10 +18,19 @@ $query = "SELECT Users.username, Projects.project_name
 FROM Users
 LEFT JOIN Projects ON Users.user_id = Projects.user_id;";
 $result = mysqli_query($conn, $query);
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+</head>
+<?php
 if ($result == TRUE){
     if (mysqli_num_rows($result) > 0) {
-        echo "<table border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
+        echo "<table class = 'styled-table' border='1' style='border-collapse: collapse; width: 100%; text-align: left;'>";
         echo "<tr>";
 
         // Fetch and display table headers
