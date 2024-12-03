@@ -14,8 +14,20 @@ if (!$conn) {
 }
 
 // Execute the query and check for errors
-$query = "SELECT * FROM Users INNER JOIN Comments ON Users.user_id = Comments.user_id
-WHERE LOWER(Comments.comment_text) LIKE '%great%';";
+$query = "SELECT 
+    Users.user_id AS user_user_id,
+    Users.username AS user_username,
+    Users.email AS user_email,
+    Users.registration_date AS user_registration_date,
+    Comments.comment_id AS comment_id,
+    Comments.user_id AS comment_user_id,
+    Comments.post_id AS comment_post_id,
+    Comments.comment_date AS comment_date,
+    Comments.comment_text AS comment_text 
+    
+    FROM Users INNER JOIN Comments 
+    ON Users.user_id = Comments.user_id
+    WHERE LOWER(Comments.comment_text) LIKE '%great%';";
 $result = mysqli_query($conn, $query);
 
 if ($result == TRUE){
