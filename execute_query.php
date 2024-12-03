@@ -1,9 +1,9 @@
 <?php
 // Database connection information
 $host = 'cssql.seattleu.edu';
-$username = 'll_jwong9';
-$password = '1fr1MPjwULlkkUBo';
-$database = 'll_jwong9';
+$username = 'll_jroot';
+$password = 'K8Y95EJit5TYp3N9';
+$database = 'll_jroot';
 
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $database);
