@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, #9ad7ff, #c4faee);
+            color: #080808;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        /* About Section */
+        .about {
+            padding: 30px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Showcase</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="project.html">Database</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Showcase</h1>
+        <p>Your platform to track and share progress, achievements, and creativity!</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Showcase is a platform where users can document their journeys, track progress, and share results with the
+            community.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Discover amazing progress photos and success stories.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Explore creative ideas from users like you!</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>Be inspired by achievements shared by the community.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Showcase. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
