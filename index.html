@@ -45,10 +45,17 @@
 
         /* Hero Section */
         .hero {
-            text-align: center;
+            display: flex; /* Enable Flexbox */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center-align text */
             padding: 50px 20px;
-            background: linear-gradient(45deg, #9ad7ff, #c4faee);
+            background-image: url('showcase.jpg');
+            background-size: cover; /* Ensure the image covers the section */
+            background-position: center; /* Center the image */
             color: #080808;
+            height: 50vh; /* Full viewport height */
         }
 
         .hero .btn {
@@ -59,9 +66,12 @@
             color: #333;
             text-decoration: none;
             font-weight: bold;
+            font-size: larger;
             border-radius: 5px;
             transition: background 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
         }
+
 
         .hero .btn:hover {
             background: #f39c12;
@@ -126,9 +136,7 @@
     </header>
 
     <section class="hero">
-        <h1>Welcome to Showcase</h1>
-        <p>Your platform to track and share progress, achievements, and creativity!</p>
-        <a href="#projects" class="btn">Explore Projects</a>
+        <a href="project.html" class="btn">Database</a>
     </section>
 
     <section id="about" class="about">
