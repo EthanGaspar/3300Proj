@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
     <body>
     <?php
     if ($result === FALSE) {
-        echo "<h1> Ad Hoc Query Error </h1>";
-        echo "<p style='color: red;'>Error executing query: " . mysqli_error($conn) . "</p>";
+        echo "<h1 style='font-size: 1.5rem; text-align: center;'> Ad Hoc Query Error </h1>";
+        echo "<p style='color: red; font-size: 0.9rem; text-align: center;'>Error executing query: " . mysqli_error($conn) . "</p>";
     } else {
         // Display results in a table if the query returns data
         echo "<h1 style='font-size: 1.5rem; text-align: center;'>Ad Hoc Query: '" . htmlspecialchars($query) . "' Result</h1>";
