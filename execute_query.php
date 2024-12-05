@@ -1,9 +1,9 @@
 <?php
 // Database connection information
 $host = 'cssql.seattleu.edu';
-$username = 'll_jroot';
-$password = 'K8Y95EJit5TYp3N9';
-$database = 'll_jroot';
+$username = 'll_jwong9';
+$password = '1fr1MPjwULlkkUBo';
+$database = 'll_jwong9';
 
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $database);
@@ -35,8 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
         echo "<p style='color: red;'>Error executing query: " . mysqli_error($conn) . "</p>";
     } else {
         // Display results in a table if the query returns data
-        echo "<h1> Ad Hoc Query: '" .htmlspecialchars($query) . "' Result</h1>";
-        echo "<p style = 'text-align: center'>Ambigous Column names highlighted in <span style='color: red'>RED</span> (CAN CAUSE ISSUES)</p>";
+        echo "<h1 style='font-size: 1.5rem; text-align: center;'>Ad Hoc Query: '" . htmlspecialchars($query) . "' Result</h1>";
+        echo "<p style='font-size: 0.9rem; text-align: center;'>Ambiguous column names highlighted in <span style='color: red;'>RED</span> (CAN CAUSE ISSUES)</p>";
+
 
 
         if (mysqli_num_rows($result) > 0) {
